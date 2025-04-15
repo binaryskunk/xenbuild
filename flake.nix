@@ -20,12 +20,18 @@
         graphviz
         python313
         python313Packages.graphviz
+        pre-commit
+        cppcheck
+        cpplint
+        include-what-you-use
       ];
 
       shellHook = ''
         export PKG_CONFIG_PATH=${pkgs.sdl3.dev}/lib/pkgconfig:${pkgs.fmt.dev}/lib/pkgconfig:$PKG_CONFIG_PATH
 
-        export CC=clang CXX=clang++
+        export CC=$(readlink -f $(which clang))
+        export CXX=$(readlink -f $(which clang++))
+
         export PS1="\u:\w $ "
       '';
     };

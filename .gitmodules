@@ -1,0 +1,3 @@
+[submodule "sktd"]
+	path = sktd
+	url = https://github.com/binaryskunk/sktd.git

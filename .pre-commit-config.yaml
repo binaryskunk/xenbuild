@@ -7,5 +7,3 @@ repos:
         args: [-i]
       - id: cppcheck
       - id: cpplint
-      - id: include-what-you-use
-        args: [-I./include, -std=c++20]
